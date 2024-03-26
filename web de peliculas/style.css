@@ -1,0 +1,267 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #31363F;
+    position: relative;
+    padding-bottom: 20px;
+
+}
+
+/*------------------- BARRA DE NAVEGACION------------- */
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.logo {
+    text-align: center;
+    color: #333;
+    margin-left: 20px;
+    background-color: rgb(216, 216, 225);
+    padding: 5px;
+    border-radius: 7px;
+
+}
+
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+header {
+    margin: 9px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.list-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 8px;
+}
+
+.link-nav {
+    color: #333;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 900;
+    background-color: rgb(216, 216, 225);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+/* --------------------Querry de menu--------------- */
+
+@media screen and (max-width: 800px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+
+
+    }
+
+    .abrir-menu {
+        color: black;
+        border: 0;
+
+    }
+
+    .cerrar-menu {
+
+        color: rgb(216, 216, 225);
+        border: 0;
+        font-size: 30px;
+        background-color: #333;
+        ;
+
+    }
+
+    .nav {
+
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        position: absolute;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #333;
+        align-items: center;
+        padding: 3rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .9);
+
+
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .list-nav {
+        margin: 80px auto;
+        flex-direction: column;
+        align-items: end;
+        gap: 5rem;
+
+
+    }
+
+
+}
+
+/* ---------------------------- Buscador de peliculas ------------------------------- */
+
+.app {
+    max-width: 100%;
+
+    text-align: center;
+    margin-top: 30px;
+}
+
+.img-pop {
+
+    width: 50px;
+}
+
+.searchinput {
+    width: 60%;
+    padding: 7px;
+    border-radius: 7px;
+    border: none;
+
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+::placeholder {
+    text-align: center;
+    font-size: 20px;
+    color: #2D3250;
+    font-weight: 900;
+}
+
+#results {
+
+    list-style: none;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin-bottom: 120px;
+    gap: 2rem;
+}
+
+.movie {
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-top: 100px;
+    align-items: center;
+    padding: 20px;
+    background-color: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.movie:hover {
+    box-shadow: 0px 1px 0px 1.7px gray;
+    cursor: pointer;
+}
+
+.img {
+    border-radius: 10px;
+
+    height: auto;
+}
+
+.año {
+    color: #cca76e;
+    font-weight: 900;
+}
+
+.title {
+    color: #2D3250;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 10px;
+    width: 250px;
+    height: 40px;
+    color: white;
+    background-color: #333;
+    border: 1px solid;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.linea {
+    width:
+        100%;
+    border: 1px solid;
+}
+/* ----------------------------------- CONTACTO --------------------------------- */
+.user-contact{
+ background-color: #DDDDDD;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 6px;
+  width: 450px;
+  padding: 3px;
+  
+
+}
+.img-user{
+    width: 20px;
+    text-align: center;
+    
+}
+article a{
+    color: #31363F;
+    font-weight: 900;
+}
+/* ----------------------------- MEDIA QUERIES------------------------------ */
+@media (width < 1000px) {
+    #results {
+        display: grid;
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+
+    .movie {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+}
